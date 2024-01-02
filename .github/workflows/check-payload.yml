@@ -1,0 +1,14 @@
+---
+name: Check GitHub event payload
+
+on:
+  release:
+    types:
+      - "published"
+
+jobs:
+  check-event:
+    runs-on: ['ubuntu-latest']
+    steps:
+      - run: |
+          echo ${{ github }}
